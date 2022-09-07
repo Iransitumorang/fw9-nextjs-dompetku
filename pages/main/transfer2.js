@@ -1,15 +1,14 @@
 import React from 'react';
 import {Form, Button} from 'react-bootstrap'
 import Link from 'next/link'
+import DashboardLayout from '../main/dashboardLayout'
 
 const Transfer2 = () => {
   return (
-    <div>
-    {/* <HeaderDashboard /> */}
-    <div className='d-flex'>
+    <DashboardLayout>
         {/* <Navbar /> */}
         {/* <HambergerMenu /> */}
-        <article className="col-8 ">
+        <article>
             <aside>
                 <div className="right-slide p-5">
                     <div className="mt-2 ms-3">
@@ -49,9 +48,7 @@ const Transfer2 = () => {
                 </div>
             </aside>
         </article>
-        </div>
-        {/* <FooterDashboard /> */}
-    </div>
+    </DashboardLayout>
   )
 }
 

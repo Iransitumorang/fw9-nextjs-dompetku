@@ -1,32 +1,38 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image'
+import dashboard from '../public/dashboard.png'
+import transfer from '../public/transfer.png'
+import topup from '../public/topup.png'
+import profile from '../public/profile.png'
+import logout from '../public/logout.png'
 
 function Navbar() {
   return (
-    <>
-        <nav className="col-md-3 ms-5 p-5 p-md-5 me-5 nav-satu">
-          <div className="d-flex flex-column parent-div">
-            <nav className="nav flex-fill flex-column">
-              <NavLink activeClassname="active" className="nav-link dashboard mb-3" to="/Home">
-                <img src={da} style={{width: "15%"}} className="img-fluid me-3" alt='Dashboard'/> Dashboard
-              </NavLink>
-              <NavLink activeClassname="active" className="nav-link transfer-nav mb-3" to="/Transfer1">
-                <img src={transfer} style={{width: "15%"}} className="img-fluid me-3" alt='Transfer'/> Transfer
-              </NavLink>
-              <NavLink activeClassname="active" className="nav-link topup mb-3" to="/Topup">
-                <img src={topup} style={{width: "15%"}} className="img-fluid me-3" alt='Top Up'/> Top Up
-              </NavLink>
-              <NavLink activeClassname="active" className="nav-link profil-nav" to="/Profile1">
-                <img src={profile} style={{width: "15%"}} className="img-fluid me-3" alt='profile'/> Profile
-              </NavLink>
-            </nav>
+        <div className='col-md-3 ms-5 p-5 p-md-5 me-5 nav-satu'>
+          <div className='d-flex flex-column parent-div'>
+            <div className='nav flex-fill flex-column'>
+              <Link href='/'><a className='nav-link dashboard mb-3 fw-bold text-dark'>
+                <Image src={dashboard} width={17} height={11} className='pe-1' alt='Dashboard'/> Dashboard
+                </a></Link>
+              <Link href='../pages/main/changePassword.js'><a className='nav-link transfer-nav mb-3 fw-bold text-dark'>
+                <Image src={transfer} width={17} height={13} className='' alt='Transfer'/> Transfer
+                </a></Link>
+              <Link href=''><a className='nav-link topup mb-3 fw-bold text-dark'>
+                <Image src={topup} width={17} height={13} className='' alt='Top Up'/>  Top Up
+                </a></Link>
+              <Link href=''><a className='nav-link profil-nav fw-bold text-dark'>
+                <Image src={profile} width={20} height={17} className='' alt='profile'/> Profile
+                </a></Link>
+            </div>
 
-            <nav className='ms-2'>
-              {/* <LogoutButton /> */}
-            </nav>
+            <div className='ms-2 fw-bold'>
+              <Link href=''><a className='nav-link logout-nav ps-3'>
+                <Image src={logout} width={15} height={13} className='' alt='Logout' /> Logout
+                </a></Link>
+            </div>
           </div>
-        </nav>
-    </>
+        </div>
   )
 }
 

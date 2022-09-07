@@ -1,16 +1,20 @@
 // import React from 'react';
 import Link from 'next/link'
+import Image from 'next/image'
+import transaction from '../public/transaction.png';
 
-function sidebar() {
+function SidebarStart() {
   return (
     <>
-    <article className="col-12 col-md-7 right-slide-login mb-3 row min-vh-100">
-        <Link href="/">
-            <img src='../public/images/dompetku2.png' alt="logo brand" className="w-25 mt-3 ms-5 img-fluid"/>
-            </Link>
+    <article className=" right-slide-login pb-5 row min-vh-100">
+        <Link href="#">
+            <a>
+            <p class="fs-2 fw-bold link-success ms-5 mt-3" style={{letterSpacing: '2px'}}>Dompetku</p>
+            </a> 
+        </Link>
         <div className="d-flex flex-column align-items-center">
             <div>
-                <img src='../public/images/dompetku2.png' alt="transaction" className="img-fluid"/>
+                <Image src={transaction} alt="transaction" className="img-fluid"/>
             </div>
             <div>
                 <h3 className="covering">App that Covering Banking Needs.</h3>
@@ -24,4 +28,4 @@ function sidebar() {
   )
 }
 
-export default sidebar
+export default SidebarStart

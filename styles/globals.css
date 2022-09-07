@@ -1,26 +1,624 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,800;1,400&display=swap');
+
+* {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    border-color: unset !important;
+}
+
+.form-control {
+    box-shadow: none !important;
+}
+
+/* ======================== */
+.right-slide-login {
+    /* background-image: url(../images/background-login.png); */
+    background-color: #76BA99;
+    color: #FFFFFF;
+}
+
+.start-acc,
+.Secure-cp1,
+.forgot-pass,
+.personal-info {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #3A3D42;
+}
+
+.transfering,
+.Create-digits-cp1,
+.reset-your-pass,
+.wegot-personal,
+.enter-your {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: rgba(58, 61, 66, 0.6);
+}
+
+.form-border {
+    background: unset;
+    border: unset;
+    border-radius: unset;
+    border-bottom: 1px solid gray;
+}
+
+.form-border2 {
+    border: unset;
+    border-radius: unset;
+    border-bottom: 1px solid gray;
+    background-color: unset;
+}
+
+.password {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.password a {
+    color: #5800FF;
+    text-decoration: none;
+}
+
+.invalid {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: #FF5B37;
+}
+
+.btn-login button,
+.btn-signup button,
+.cp1-btn-confirm button,
+.login-now button,
+.rp-btn-confirm button,
+.details,
+.transfer,
+.add-number2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.underlines a,
+a {
+    text-decoration: none;
+}
+
+.signup {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: rgba(58, 61, 66, 0.8);
+}
+
+.signup a {
+    color: #3A3D42;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.covering {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+
+/* INI STYLE TAMBAHAN UNTUK CREATE PIN 1 */
+.auth-form-wrapper {
+    padding-top: 15opx;
+}
+
+.form-create-pin {
+    padding: 2px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.form-create-pin input {
+    height: 70%;
+    width: 50px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    border: unset;
+    border-bottom: 1px solid gray;
+}
+
+.cp1-btn-confirm button,
+.login-now button {
+    width: 71%;
+}
+
+.pin-input-wrapper {
+    max-height: 60px;
+    width: 75%;
+}
+
+.pin-input-wrapper input:focus {
+    outline: none;
+}
+
+/* INI NAVBAR */
+.left-slide-head,
+.left-slide-home,
+footer,
+.header-dashboard {
+    background-color: #76BA99;
+}
+
+.dashboard:hover,
+.transfer-nav:hover,
+.topup:hover,
+.profil-nav:hover,
+.logout-nav:hover {
+    background-color: #76BA99;
+    border-radius: 1vw;
+}
+
+/* INI STYLE HOME.JS */
+.right-slide,
+.left-slide,
+.robert-profile,
+.robert-nav,
+.right-bottom2 {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 25px;
+}
+
+.nav-satu {
+    background: #FCF8E8;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 25px;
+}
+
+.parent-div {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 31px;
+}
+
+.transfer-nav,
+.topup,
+.logout-nav,
+.dashboard,
+.profil-nav {
+    font-weight: 700;
+    color: #4D4B57;
+}
+
+.left-slide-home {
+    border-radius: 20px;
+}
+
+.balance-home {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 31px;
+    color: #E0E0E0;
+}
+
+.seratus20-home {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+    color: #FFFFFF;
+}
+
+.number-phone-home {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #DFDCDC;
+}
+
+.home-rp {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1EC15F;
+}
+
+.home-rp2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FF5B37;
+}
+
+.bg-white {
+    top: calc(50% - 56px/2);
+    background: #EBEEF2;
+    border-radius: 10px;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    height: 45px;
+}
+
+.bg-white2 {
+    top: calc(50% - 56px/2);
+    background: #EBEEF2;
+    border-radius: 10px;
+    padding-left: 1.5vw;
+    padding-right: 1vw;
+}
+
+/* .transfer {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    width: 80%;
+    height: 46px;
+    padding: 6px;
+} */
+
+.home-transfer,
+.home-topup {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+.home-topup {
+  width: 8.5vw;
+}
+
+.home-transfer a,
+.home-topup a,
+.btn-change-password {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.income {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6A6A6A;
+}
+
+.expense,
+.contacts-info {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #3A3D42;
+}
+
+.trans-history {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.see-all {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.see-all:hover {
+  background-color: #76BA99;
+  border-radius: 1vw;
+  width: 4.5vw;
+  height: 1.5vw;
+  text-align: center;
+  align-items: center;
+}
+
+.home-transfer:hover,
+.home-topup:hover {
+  background-color: #76BA99;
+}
+
+/* INI STYLE HISTORY */
+.trans-history,
+.modal-span2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.this-week {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #7A7886;
+}
+
+.this-month {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #7A7886;
+}
+
+/* INI STYLE TRANSFER */
+.numb-tf {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7A7886;
+}
+
+.search-receiver,
+.transfer-money {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.amount-value {
+    width: 50%;
+    font-size: 3vw;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+}
+
+.amount-value::placeholder {
+    text-align: center;
+    /* width: 50%; */
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.parent-input {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .type-amount {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #7A7886;
+} */
+
+/* .seratus-ribu {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 56px;
+    text-align: center;
+    color: #6379F4;
+} */
+
+.seratus20 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #3A3D42;
+    margin: 3vw auto;
+}
+
+/* INI STYLE PIN CONFIRMATION */
+.modal-value {
+    padding: 2px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.modal-value input {
+    height: 70%;
+    width: 50px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    border: unset;
+    border-bottom: 1px solid gray;
+}
+
+.modal-footer {
+    border: unset !important;
+}
+
+.modal-btn-continue,
+.modal-continue,
+.how-to-topup {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+/* STATUS */
+.transfer-to,
+.enter-pin {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #514F5B;
+}
+
+.btn-back-home {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    height: 55px;
+    margin-top: 2.5vw;
+}
+
+.downloadpdf {
+    margin: -2vw;
+    margin-right: -3vw;
+    margin-left: -8vw;
+}
+
+.try-again {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    height: 4vw;
+    width: 11vw;
+    margin-top: 3vw;
+}
+
+/* INI CHANGE PIN */
+.auth-form-wrapper .value {
+    padding: 2px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.auth-form-wrapper input {
+    height: 70%;
+    width: 50px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    border: unset;
+    border-bottom: 1px solid gray;
+}
+
+.change-pin-btn {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    width: 31vw;
+}
+
+/* ======RANDOM===== */
+.form-value {
+    width: 50%;
+}
+
+.modal-dialog {
+    margin-right: 3vw;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
-* {
-  box-sizing: border-box;
+/* PROFILE NOTIF */
+.today {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #7A7886;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.this-week {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #7A7886;
+}
+
+.modal-pn {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+/* MANAGE NUMBER */
+.primary-parent {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+}
+
+.primary {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7A7886;
+}
+
+.number-phone {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #514F5B;
+}
+
+/* CONFIRM */
+.confirm-detail {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+/* PIN CONFIRM */
+.modal-header {
+    border-bottom: unset;
+}
+
+.modal-continue {
+    text-align: end;
+    margin-right: 20px;
+}
+
+/* TOP UP */
+.instructions {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.angka {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #6379F4;
+}
+
+.inst-value {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #7A7886;
+}
+
+/* INI STYLE FOOTER */
+footer h3 {
+    font-size: 16px !important;
+    line-height: 28px !important;
+    font-weight: 700;
+}
+
+.all-reserved {
+    font-weight: 400;
+    color: rgba(239, 239, 239, 0.9);
+}
+
+.contact-us {
+    font-weight: 600;
+    color: #EFEFEF;
+}
+
+.nav-satu {
+    display: flex;
+}
+
+.hamberger-menu {
+    display: none;
+}
+
+@media (max-width: 1075px) {
+    .nav-satu {
+        display: none;
+    }
+
+    .hamberger-menu {
+        display: flex;
+    }
 }
