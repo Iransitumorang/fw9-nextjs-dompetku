@@ -23,7 +23,6 @@ const Login = () => {
                     <AiOutlineMail />
                 </div>
                 <input name="email" type="email" className="form-control form-border w-100 me-2" placeholder="Pewdiepie1@gmail.com" />
-                {/* <div type="invalid">{errors.email}</div> */}
             </div>
 
             <div className="input-group flex-nowrap" controlId="formBasicPassword">
@@ -31,19 +30,18 @@ const Login = () => {
                     <FiLock />
                 </div>
                 <input name="password" type="password" className="form-control form-border w-100 me-2" placeholder="Enter your password" />
-                {/* <div type="invalid">{errors.password}</div> */}
             </div>
 
                 <div className="text-end password mt-2">
-                    <Link href="/ResetPassword"><a>Forgot Password?</a></Link>
+                    <Link href="/main/resetPassword"><a>Forgot Password?</a></Link>
                 </div>
                 <h3 className="invalid mt-3">Email or Password Invalid</h3>
-                <Link href="/Home">
+                <Link href="/main/home">
                     <a className="d-grid btn-login underlines">
                         <Button type="submit" variant="success" >Login</Button>
                     </a>
                 </Link>
-                <div className="signup">Don’t have an account? Let’s <Link href="/Signup"><a>Sign Up</a></Link></div>
+                <div className="signup">Don’t have an account? Let’s <Link href="/main/signup"><a>Sign Up</a></Link></div>
         </Form>
                 </div>
             </aside>

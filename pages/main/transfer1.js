@@ -2,6 +2,9 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import Link from 'next/link'
 import DashboardLayout from '../main/dashboardLayout'
+import samsuhi from '../../public/sam-suhi.jpg'
+import Image from 'next/image'
+import { AiOutlineSearch } from 'react-icons/ai';
 
 function Data(props) {
     return <span className='search-receiver'> {props.name}</span>
@@ -14,8 +17,6 @@ function Contacts(props) {
 const Transfer1 = () => {
   return (
         <DashboardLayout>
-                {/* <Navbar /> */}
-                {/* <HambergerMenu /> */}
                 <article>
                     <aside>
                         <div className="right-slide p-md-5">
@@ -25,7 +26,7 @@ const Transfer1 = () => {
                                 <div className="form-list mb-5">
                                     <div className="input-group flex-nowrap mt-5 mb-5">
                                         <span className="input-group-text form-border2">
-                                            <img src='' alt="search" />
+                                            <AiOutlineSearch />
                                         </span>
                                         <input type="email" className="form-control form-border" placeholder="Search receiver here" />
                                     </div>
@@ -35,28 +36,28 @@ const Transfer1 = () => {
                             <div className="d-flex flex-column mb-5">
                                 <div className="d-flex flex-column gap-5">
                                     <div className='d-flex flex-row'>
-                                        <img src='' alt="Samuel Suhi"/>
+                                        <Image src={samsuhi} alt="Samuel Suhi"/>
                                         <div className='d-flex flex-column ms-3'>
                                             <Data name="Samuel Suhi"/>
                                             <Contacts number="+62 813-8492-9994"/>
                                         </div>
                                     </div>
                                     <div className='d-flex flex-row'>
-                                        <img src='' alt="Momo Taro"/>
+                                        <Image src={samsuhi} alt="Momo Taro"/>
                                         <div className='d-flex flex-column ms-3'>
                                             <Data name="Momo Taro"/>
                                             <Contacts number="+62 812-4343-6731"/>
                                         </div>
                                     </div>
                                     <div className='d-flex flex-row'>
-                                        <img src='' alt="Jessica Keen"/>
+                                        <Image src={samsuhi} alt="Jessica Keen"/>
                                         <div className='d-flex flex-column ms-3'>
                                             <Data name="Jessica Keen"/>
                                             <Contacts number="+62 811-3452-5252"/>
                                         </div>
                                     </div>
                                     <div className='d-flex flex-row'>
-                                        <img src='' alt="Michael Le"/>
+                                        <Image src={samsuhi} alt="Michael Le"/>
                                         <div className='d-flex flex-column ms-3'>
                                             <Data name="Michael Le"/>
                                             <Contacts number="+62 810-4224-4613"/>
@@ -65,13 +66,14 @@ const Transfer1 = () => {
                                 </div>
                             </div>
 
-                            <Link href="/Transfer2" className="mt-5 ms-4">
-                                <Button variant="success" className="btn-change-password">Transfer</Button>
-                            </Link>
+                            <div className='d-grid'>
+                                <Link href="/main/transfer2" className="mt-5 ms-4">
+                                    <Button variant="success" className="btn-change-password">Transfer</Button>
+                                </Link>
+                            </div>
                         </div>
                     </aside>
                 </article>
-
         </DashboardLayout>
   )
 }

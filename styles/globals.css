@@ -325,6 +325,21 @@ footer,
   background-color: #76BA99;
 }
 
+/*  PROFILE */
+.linkProfile {
+    color: #4D4B57;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.profileMain {
+    background: #E5E8ED;
+    border-radius: 10px;
+    width: 60%;
+    height: 3vw;
+    padding: 10px;
+}
+
 /* INI STYLE HISTORY */
 .trans-history,
 .modal-span2 {

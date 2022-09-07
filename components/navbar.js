@@ -15,19 +15,19 @@ function Navbar() {
               <Link href='/'><a className='nav-link dashboard mb-3 fw-bold text-dark'>
                 <Image src={dashboard} width={17} height={11} className='pe-1' alt='Dashboard'/> Dashboard
                 </a></Link>
-              <Link href='../pages/main/changePassword.js'><a className='nav-link transfer-nav mb-3 fw-bold text-dark'>
+              <Link href='/main/transfer1'><a className='nav-link transfer-nav mb-3 fw-bold text-dark'>
                 <Image src={transfer} width={17} height={13} className='' alt='Transfer'/> Transfer
                 </a></Link>
-              <Link href=''><a className='nav-link topup mb-3 fw-bold text-dark'>
+              <Link href='/main/topup'><a className='nav-link topup mb-3 fw-bold text-dark'>
                 <Image src={topup} width={17} height={13} className='' alt='Top Up'/>  Top Up
                 </a></Link>
-              <Link href=''><a className='nav-link profil-nav fw-bold text-dark'>
+              <Link href='/main/profile1'><a className='nav-link profil-nav fw-bold text-dark'>
                 <Image src={profile} width={20} height={17} className='' alt='profile'/> Profile
                 </a></Link>
             </div>
 
             <div className='ms-2 fw-bold'>
-              <Link href=''><a className='nav-link logout-nav ps-3'>
+              <Link href='/main/login'><a className='nav-link logout-nav ps-3'>
                 <Image src={logout} width={15} height={13} className='' alt='Logout' /> Logout
                 </a></Link>
             </div>

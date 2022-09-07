@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import Link from 'next/link'
-import DashboardStart from './dashboardStart'
+import Link from 'next/link';
+import DashboardStart from './dashboardStart';
+import { AiOutlineMail } from 'react-icons/ai';
 
 function ResetPassword() {
   return (
@@ -15,12 +16,12 @@ function ResetPassword() {
                 <Form className="form-list mb-5">
                     <Form.Group className="input-group flex-nowrap mt-5 mb-5">
                         <span className="input-group-text form-border2">
-                            <img src='' alt="mail"/>
+                            <AiOutlineMail />
                         </span>
                         <Form.Control type="email" name="email" className="form-control form-border w-100 me-2" placeholder="pewdiepie1@gmail.com"/>
                     </Form.Group>
                     <div className='underlines d-grid rp-btn-confirm'>
-                        <Link href="/ResetPassword2" className="d-grid btn-login">
+                        <Link href="/main/resetPassword2" className="d-grid btn-login">
                             <Button type="button" variant="success">Confirm</Button>
                         </Link>
                     </div>

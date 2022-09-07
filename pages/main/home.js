@@ -31,7 +31,7 @@ const Home = () => {
               </div>
               <div className="d-flex flex-column">
                 <div className="mb-3 home-transfer px-3 py-2 m-auto fw-bold">
-                  <Link href={'#'}> 
+                  <Link href="/main/transfer1"> 
                     <a>
                       <Image
                         src={arrowup} width={17} height={17}
@@ -41,7 +41,7 @@ const Home = () => {
                   </Link>
                 </div>
                 <div className="home-topup px-3 py-2 m-auto fw-bold">
-                  <Link href={'#'}> 
+                  <Link href="/main/topup"> 
                     <a>
                       <Image
                         src={arrowdown} width={17} height={17}
@@ -75,7 +75,7 @@ const Home = () => {
               <div className="right-slide col-12 col-md-5">
                 <div className="d-flex justify-content-between px-4 mt-3">
                   <h3 className="trans-history">Transaction History</h3>
-                  <Link href={'#'} >
+                  <Link href="/main/history" >
                     <a className="see-all text-dark fw-bold">
                       See all
                     </a>

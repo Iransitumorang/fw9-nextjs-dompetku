@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import Link from 'next/link'
-import DashboardStart from './dashboardStart'
+import Link from 'next/link';
+import DashboardStart from './dashboardStart';
+import { FiLock } from 'react-icons/fi';
   
 function ResetPassword() {
   return (
@@ -17,19 +18,19 @@ function ResetPassword() {
                 <Form className="form-list mb-5">
                     <Form.Group className="input-group flex-nowrap mt-5 mb-5">
                         <span className="input-group-text form-border2">
-                            <img src='' alt="lock"/>
+                            <FiLock />
                         </span>
                         <Form.Control type="password" name="password" className="form-control form-border w-100 me-2" placeholder="Input your new password"/>
                     </Form.Group>
                     <Form.Group className="input-group flex-nowrap mt-5 mb-5">
                         <span className="input-group-text form-border2">
-                            <img src='' alt="lock"/>
+                            <FiLock />
                         </span>
                         <Form.Control type="password" className="form-control form-border w-100 me-2" name="password2" 
                             placeholder="Re-Input your new password"/>
                     </Form.Group>
-                <div className='underlines'>
-                    <Link href="/Login" className="d-grid rp-btn-confirm">
+                <div className='d-grid underlines'>
+                    <Link href="/main/login" className="d-grid rp-btn-confirm">
                         <Button type="button" variant="success">Reset Password</Button>
                     </Link>
                 </div>
